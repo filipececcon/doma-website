@@ -22,23 +22,8 @@ $(function () {
         event.preventDefault();
     });
 
-    $('.owl-carousel').owlCarousel({
-        items: 1,
-        merge: true,
-        loop: true,
-        margin: 10,
-        video: true,
-        lazyLoad: true,
-        center: true,
-        responsive: {
-            480: {
-                items: 2
-            },
-            600: {
-                items: 4
-            }
-        }
-    })
+    $('[data-toggle="tooltip"]').tooltip()
+
 });
 
 // Closes the Responsive Menu on Menu Item Click
@@ -47,3 +32,5 @@ $('.navbar-collapse ul li a').click(function () {
 });
 
 $('.content-section:even').css('backgroundColor', 'black');
+
+$("#copyright").append(new Date().getFullYear());

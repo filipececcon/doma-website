@@ -300,3 +300,36 @@ body {
 .fa-dot-circle-o {
   color: red;
 }
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /*16:9*/
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-left: 8%;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+}
+#social {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  font-size: 50px;
+}
+#social a {
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+#social a:hover {
+  color: red;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}
