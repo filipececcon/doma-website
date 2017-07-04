@@ -10,9 +10,9 @@
     <meta name="author" content="">
 
     <title>DOMA - Metalcore band</title>
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/owl.carousel.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
@@ -38,16 +38,15 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars fa-2x"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">DOMA</a>
+                <a class="navbar-brand page-scroll" href="#page-top">LOGO DOMA</a>
             </div>
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a class="page-scroll" href="#sobre">sobre</a></li>
                     <li><a class="page-scroll" href="#ouca">ouça</a></li>
+                    <li><a class="page-scroll" href="#sobre">sobre</a></li>
                     <li><a class="page-scroll" href="#videos">vídeos</a></li>
                     <li><a class="page-scroll" href="#agenda">agenda</a></li>
-                    <li><a class="page-scroll" href="#loja">loja</a></li>
                     <li><a class="page-scroll" href="#contato">contato</a></li>
                 </ul>
             </div>
@@ -58,22 +57,20 @@
     <header class="intro"></header>
 
 
-    <!-- ouça -->
     <section id="ouca" class="content-section">
         <div class="container">
             <h2><i class="fa fa-dot-circle-o"></i> ouça agora</h2>
-                <div id="social">
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" ><i class="fa fa-facebook"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Spotify" ><i class="fa fa-spotify"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="SoundCloud" ><i class="fa fa-soundcloud"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" ><i class="fa fa-twitter"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram" ><i class="fa fa-instagram"></i></a>
-                </div>
+            <div id="social">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Spotify"><i class="fa fa-spotify"></i></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="SoundCloud"><i class="fa fa-soundcloud"></i></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
+            </div>
             <iframe src="https://open.spotify.com/embed/track/1LshwWaa8xIFHxOC01Qgdk" frameborder="0" allowtransparency="true" id="player"></iframe>
         </div>
     </section>
 
-    <!-- sobre -->
     <section id="sobre" class="content-section">
         <div class="container">
             <div class="row">
@@ -89,8 +86,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section id="videos" class="container-fluid content-section text-center">
         <div class="container">
@@ -111,15 +106,15 @@
             <div class="row">
                 <h2><i class="fa fa-dot-circle-o"></i> agenda</h2>
 
-                <table class="table table-responsive table-striped" id="tabela">
+                <table class="table table-responsive" id="tabela">
                     <thead>
                         <tr>
-                            <th>Nome do evento</th>
+                            <th>Descrição</th>
                             <th>Endereço</th>
-                            <th>Horário</th>
-                            <th>Detalhes</th>
+                            <th>Dia e horário</th>
                         </tr>
                     </thead>
+                    <tbody id="eventos"></tbody>
                 </table>
             </div>
         </div>
@@ -128,7 +123,18 @@
     <section id="contato" class="container-fluid content-section">
         <div class="container">
             <div class="row">
-                <h2><i class="fa fa-dot-circle-o"></i> contato</h2>
+                <div class="col-lg-6 text-center">
+                    <h2><i class="fa fa-dot-circle-o"></i> contato</h2>
+                    <a href="mailto:domarock@gmail.com" class="fa-2x">domarock@gmail.com</a>
+                </div>
+                <div class="col-lg-6">
+                    <h2><i class="fa fa-dot-circle-o"></i> apoio</h2>
+                    <div id="patrocinios">
+
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </section>
 
@@ -140,9 +146,9 @@
         </div>
     </footer>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="node_modules/bootstrap//dist/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/owl.carousel.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!--<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>-->
     <script src="js/grayscale.min.js"></script>

@@ -34,3 +34,17 @@ $('.navbar-collapse ul li a').click(function () {
 $('.content-section:even').css('backgroundColor', 'black');
 
 $("#copyright").append(new Date().getFullYear());
+
+var eventos = [
+    {
+        link: "www.uol.com.br",
+        nome: "Loolapalooza Music Festival",
+        endereco: "Jockey Club São Paulo - 08080-909 - São Paulo - SP",
+        datahora: "Sábado 22/07/2017 ás 19:00"
+    }
+];
+
+eventos.forEach(function(evento) {
+        var linha = "<tr><td><a href="+evento.link+">"+evento.nome+"</a></td><td>"+evento.endereco+"</td><td>"+evento.datahora+"</td></tr>";
+        $("#eventos").append(linha);
+}, this);
