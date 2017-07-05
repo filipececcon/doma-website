@@ -24,6 +24,15 @@ $(function () {
 
     $('[data-toggle="tooltip"]').tooltip()
 
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        margin: 10,
+        autoHeight: true,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: true
+    });
+
 });
 
 // Closes the Responsive Menu on Menu Item Click
@@ -35,16 +44,14 @@ $('.content-section:even').css('backgroundColor', 'black');
 
 $("#copyright").append(new Date().getFullYear());
 
-var eventos = [
-    {
-        link: "www.uol.com.br",
-        nome: "Loolapalooza Music Festival",
-        endereco: "Jockey Club São Paulo - 08080-909 - São Paulo - SP",
-        datahora: "Sábado 22/07/2017 ás 19:00"
-    }
-];
+var eventos = [{
+    link: "www.uol.com.br",
+    nome: "Loolapalooza Music Festival",
+    endereco: "Jockey Club São Paulo - 08080-909 - São Paulo - SP",
+    datahora: "Sábado 22/07/2017 ás 19:00"
+}];
 
-eventos.forEach(function(evento) {
-        var linha = "<tr><td><a href="+evento.link+">"+evento.nome+"</a></td><td>"+evento.endereco+"</td><td>"+evento.datahora+"</td></tr>";
-        $("#eventos").append(linha);
+eventos.forEach(function (evento) {
+    var linha = "<tr><td><a href=" + evento.link + ">" + evento.nome + "</a></td><td>" + evento.endereco + "</td><td>" + evento.datahora + "</td></tr>";
+    $("#eventos").append(linha);
 }, this);
