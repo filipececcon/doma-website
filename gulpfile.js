@@ -23,7 +23,7 @@ gulp.task('less', function () {
         .pipe(header(banner, {
             pkg: pkg
         }))
-        .pipe(gulp.dest('vendor'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -38,7 +38,7 @@ gulp.task('minify-css', ['less'], function () {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('vendor'))
         .pipe(browserSync.reload({
             stream: true
         }))
